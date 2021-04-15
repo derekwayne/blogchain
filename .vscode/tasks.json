@@ -1,0 +1,9 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "echotest",
+        "command": "sass", // Could be any other shell command
+        "args": ["flaskr/static/sass/styles.scss", "flaskr/static/stylesheets/sass_styles.css"],
+        "type": "shell"
+    }]
+}

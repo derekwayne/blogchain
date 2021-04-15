@@ -1,0 +1,116 @@
+$background-color: white;
+$search-bg-color: #242628;
+// $icon-color: #00FEDE;
+$icon-color: white;
+$transition: all .5s ease;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-color;
+}
+
+.search {
+  width: 37.61px;
+  height: 37.61px;
+  background-color: $search-bg-color;
+  position: relative;
+  overflow: hidden;
+  transition: $transition;
+  &:before {
+    content: '';
+    display: block;
+    width: 1.1283px;
+    height: 100%;
+    position: relative;
+    background-color: $icon-color;
+    transition: $transition;
+  }
+  &.open {
+    width: 157.962px;
+    &:before {
+      height: 22.566px;
+      margin: 7.522px 0 7.522px 11.283px;
+      position: absolute;
+    }
+  }
+}
+
+.search-box {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 7.4px 37.61px 7.4px 16.65px;
+  font-size: 15px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-button {
+  width: 37.61px;
+  height: 37.61px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 7.4px;
+  cursor: pointer;
+}
+
+.search-icon {
+  width: 14.8px;
+  height: 14.8px;
+  border-radius: 14.8px;
+  border: 1.13px solid $icon-color;
+  display: block;
+  position: relative;
+  margin-left: 1.88px;
+  transition: $transition;
+  &:before {
+    content: '';
+    width: 1.13px;
+    height: 5.6415px;
+    position: absolute;
+    right: -0.7522px;
+    top: 11.283px;
+    display: block;
+    background-color: $icon-color;
+    transform: rotate(-45deg);
+    transition: $transition;
+  }
+  &:after {
+    content: '';
+    width: 1.13px;
+    height: 5.6415px;
+    position: absolute;
+    right: -4.5132px;
+    top: 15px;
+    display: block;
+    background-color: $icon-color;
+    transform: rotate(-45deg);
+    transition: $transition;
+  }
+  .open & {
+    margin: 0;
+    width: 22.566px;
+    height: 22.566px;
+    border-radius: 22.566px;
+    &:before {
+      transform: rotate(52deg);
+      right: 8.2742px;
+      top: 8.6503px;
+      height: 6.7698px;
+    }
+    &:after {
+      transform: rotate(-230deg);
+      right: 8.2742px;
+      top: 4.8893px;
+      height: 6.7698px;
+    }
+  }
+}
