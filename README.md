@@ -1,4 +1,3 @@
-### Project Ideas:
-* blockchain analytics / visualizer
-* datastructures tutorial
-* linear algebra visualizer
+### Build Steps
+* `py -m build`
+* `pip install .\dist\blogchain-derekwayne-0.0.1.tar.gz`
